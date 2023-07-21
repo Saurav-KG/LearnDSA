@@ -4,8 +4,8 @@ import java.util.HashMap;
 // Check if any good pair exist or not.
 public class GoodPairArrayIntermediate {
     public static void main(String[] args) {
-        int[] A = {1, 2, 3,8 , 3};
-        int B = 6;
+        int[] A = {1, 2, 4};
+        int B = 4;
         boolean res = GoodPair(A,B);
         System.out.print(res);
     }
@@ -25,7 +25,7 @@ public class GoodPairArrayIntermediate {
                 return true;
             }
             else{
-                if(freqMap.containsKey(valToFind)){
+                if(freqMap.containsKey(valToFind) && valToFind != A[i]){
                     return true;
                 }
             }
